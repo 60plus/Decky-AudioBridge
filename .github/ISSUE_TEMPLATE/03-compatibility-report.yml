@@ -1,0 +1,161 @@
+name: Compatibility report
+description: Share how Audio Bridge works on your devices and which features you tested.
+title: '[Compatibility]: '
+labels: [compatibility]
+body:
+- type: markdown
+  attributes:
+    value: Share results from your own setup. Select Not tested for anything you did not check. A
+      report describes this setup, not every device of the same kind.
+- type: textarea
+  id: versions
+  attributes:
+    label: Versions
+    description: The plugin version is shown at the bottom of the panel. The receiver version is the
+      first line of its Diagnostics section.
+    placeholder: 'Audio Bridge plugin:
+
+      Audio Bridge Receiver:
+
+      SteamOS (or other system) version:
+
+      SPlug or Decky Loader version:'
+  validations:
+    required: true
+- type: dropdown
+  id: loader
+  attributes:
+    label: Plugin loader
+    options:
+    - SPlug
+    - Decky Loader
+    - Other
+  validations:
+    required: true
+- type: textarea
+  id: gaming
+  attributes:
+    label: Gaming device
+    description: Use exact model names where available.
+    placeholder: 'Device (Steam Deck OLED, desktop PC, ROG Ally...):
+
+      System (SteamOS, Bazzite, ChimeraOS...):
+
+      Audio output in use (speakers, HDMI, headphones, Bluetooth):'
+  validations:
+    required: true
+- type: textarea
+  id: receiver
+  attributes:
+    label: Receiver PC
+    placeholder: 'Windows version:
+
+      Output device (headphones, speakers, USB DAC...):
+
+      Delay setting:'
+  validations:
+    required: true
+- type: dropdown
+  id: network
+  attributes:
+    label: Network connection
+    options:
+    - Both computers wired
+    - One wired, one on Wi-Fi
+    - Both on Wi-Fi
+  validations:
+    required: true
+- type: dropdown
+  id: install
+  attributes:
+    label: Installing the plugin
+    options:
+    - Works
+    - Partly works
+    - Does not work
+    - Not tested
+  validations:
+    required: true
+- type: dropdown
+  id: discovery
+  attributes:
+    label: Find receivers on my network
+    options:
+    - Works
+    - Partly works
+    - Does not work
+    - Not tested
+  validations:
+    required: true
+- type: dropdown
+  id: streaming
+  attributes:
+    label: Streaming and the test sound
+    options:
+    - Works
+    - Partly works
+    - Does not work
+    - Not tested
+  validations:
+    required: true
+- type: dropdown
+  id: low-latency
+  attributes:
+    label: Low latency preset without crackles
+    options:
+    - Works
+    - Partly works
+    - Does not work
+    - Not tested
+  validations:
+    required: true
+- type: dropdown
+  id: high-quality
+  attributes:
+    label: High quality preset
+    options:
+    - Works
+    - Partly works
+    - Does not work
+    - Not tested
+  validations:
+    required: true
+- type: dropdown
+  id: sleep
+  attributes:
+    label: Streaming comes back after sleep and wake
+    options:
+    - Works
+    - Partly works
+    - Does not work
+    - Not tested
+  validations:
+    required: true
+- type: dropdown
+  id: autostart
+  attributes:
+    label: Start streaming automatically
+    options:
+    - Works
+    - Partly works
+    - Does not work
+    - Not tested
+  validations:
+    required: true
+- type: dropdown
+  id: receiver-autostart
+  attributes:
+    label: Receiver starts with Windows
+    options:
+    - Works
+    - Partly works
+    - Does not work
+    - Not tested
+  validations:
+    required: true
+- type: textarea
+  id: details
+  attributes:
+    label: Details and limitations
+    description: Games you tried, how the delay felt, anything that needed a workaround. Link a
+      separate bug report for a problem that needs investigation.

@@ -1,0 +1,59 @@
+name: Feature request
+description: Suggest a focused improvement to the plugin or the receiver.
+title: '[Feature]: '
+labels: [enhancement]
+body:
+- type: markdown
+  attributes:
+    value: Explain what you want to do and how the change would help.
+- type: checkboxes
+  id: before-submit
+  attributes:
+    label: Before you submit
+    options:
+    - label: I searched existing issues for the same request.
+      required: true
+- type: dropdown
+  id: area
+  attributes:
+    label: Area
+    options:
+    - Plugin panel
+    - Receiver for Windows
+    - Receiver for another system (Linux, macOS, Android)
+    - Sound quality and delay
+    - Finding receivers and network
+    - Documentation
+    - Other
+  validations:
+    required: true
+- type: textarea
+  id: problem
+  attributes:
+    label: What would you like to do?
+    placeholder: Describe the task and what currently gets in the way.
+  validations:
+    required: true
+- type: textarea
+  id: proposal
+  attributes:
+    label: How should it work?
+    placeholder: Describe what you would see and press.
+  validations:
+    required: true
+- type: textarea
+  id: alternatives
+  attributes:
+    label: Current workaround or alternatives
+- type: textarea
+  id: setup
+  attributes:
+    label: Your setup, if it matters for the request
+    description: Gaming device, receiver PC, network, or screenshots and links.
+- type: checkboxes
+  id: participation
+  attributes:
+    label: Optional follow-up
+    options:
+    - label: I can test this on my devices.
+    - label: I can help with code or documentation.

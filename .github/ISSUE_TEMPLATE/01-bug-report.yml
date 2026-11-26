@@ -1,0 +1,159 @@
+name: Bug report
+description: Report a problem with the plugin, the stream or the Windows receiver.
+title: '[Bug]: '
+labels: [bug]
+body:
+- type: markdown
+  attributes:
+    value: Describe one problem per report. The Troubleshooting section of the README covers the
+      most common connection problems, including Windows Firewall.
+- type: checkboxes
+  id: before-submit
+  attributes:
+    label: Before you submit
+    options:
+    - label: I searched existing issues for the same problem.
+      required: true
+    - label: I read the Troubleshooting section of the README.
+      required: true
+- type: dropdown
+  id: area
+  attributes:
+    label: Where does the problem occur?
+    options:
+    - Installing or updating the plugin
+    - Opening the plugin panel
+    - Finding the receiver on the network
+    - Starting or stopping the stream
+    - No sound on the receiver
+    - Crackles, gaps or too much delay
+    - Test sound
+    - Start streaming automatically
+    - After sleep, wake or a network change
+    - Receiver window, output device or volume
+    - Windows Firewall
+    - Other / not sure
+  validations:
+    required: true
+- type: textarea
+  id: symptom
+  attributes:
+    label: What happened, and what did you expect?
+    description: Include the status text shown in the plugin panel and in the receiver window, if any.
+    placeholder: The panel says "Receiver is not answering", but the receiver window shows...
+  validations:
+    required: true
+- type: textarea
+  id: steps
+  attributes:
+    label: Steps leading to the problem
+    placeholder: '1. Start the receiver on the Windows PC
+
+      2. Open Audio Bridge and press...
+
+      3. The panel shows...'
+  validations:
+    required: true
+- type: dropdown
+  id: frequency
+  attributes:
+    label: How often does it happen?
+    options:
+    - Every time
+    - Sometimes
+    - Only once so far
+  validations:
+    required: true
+- type: textarea
+  id: versions
+  attributes:
+    label: Versions
+    description: The plugin version is shown at the bottom of the panel. The receiver version is the
+      first line of its Diagnostics section.
+    placeholder: 'Audio Bridge plugin:
+
+      Audio Bridge Receiver:
+
+      SteamOS (or other system) version:
+
+      SPlug or Decky Loader version:'
+  validations:
+    required: true
+- type: dropdown
+  id: loader
+  attributes:
+    label: Plugin loader
+    options:
+    - SPlug
+    - Decky Loader
+    - Other / not sure
+  validations:
+    required: true
+- type: dropdown
+  id: device
+  attributes:
+    label: Gaming device
+    options:
+    - Steam Deck LCD
+    - Steam Deck OLED
+    - Desktop or laptop PC with SteamOS
+    - Other handheld (ROG Ally, Legion Go and similar)
+    - Other
+  validations:
+    required: true
+- type: dropdown
+  id: system
+  attributes:
+    label: Gaming system
+    options:
+    - SteamOS
+    - Bazzite
+    - ChimeraOS
+    - Other
+  validations:
+    required: true
+- type: textarea
+  id: receiver
+  attributes:
+    label: Receiver PC
+    description: Windows version and the output device chosen in the receiver.
+    placeholder: 'Windows version:
+
+      Output device:
+
+      Delay setting:'
+  validations:
+    required: true
+- type: dropdown
+  id: network
+  attributes:
+    label: Network connection
+    options:
+    - Both computers wired
+    - One wired, one on Wi-Fi
+    - Both on Wi-Fi
+    - Not sure
+  validations:
+    required: true
+- type: dropdown
+  id: preset
+  attributes:
+    label: Quality preset in the plugin
+    options:
+    - Low latency
+    - Balanced
+    - High quality
+- type: textarea
+  id: tried
+  attributes:
+    label: What have you already tried?
+    description: For example another preset, another output device, a cable instead of Wi-Fi, or
+      restarting the receiver. Leave blank if nothing was changed.
+- type: textarea
+  id: diagnostics
+  attributes:
+    label: Diagnostics and screenshots
+    description: In the plugin, press Show diagnostics, then Copy diagnostics, and paste the text here.
+      In the receiver, open Diagnostics and press Copy diagnostics. The plugin hides the last two parts
+      of IP addresses; remove anything else you do not want to share.
+    render: text
