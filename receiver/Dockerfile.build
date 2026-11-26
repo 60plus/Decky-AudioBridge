@@ -1,0 +1,8 @@
+# Build environment for the receiver: Linux tests plus a Windows binary
+# cross-compiled with MinGW. Used by scripts/build-receiver.sh.
+FROM rust:1-bookworm
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends mingw-w64 libasound2-dev pkg-config \
+ && rm -rf /var/lib/apt/lists/* \
+ && rustup target add x86_64-pc-windows-gnu \
+ && rustup component add clippy rustfmt

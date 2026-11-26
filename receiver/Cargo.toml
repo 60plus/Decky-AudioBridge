@@ -1,0 +1,33 @@
+[package]
+name = "audio-bridge-receiver"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Plays the sound streamed by the Audio Bridge plugin for SteamOS."
+publish = false
+
+[[bin]]
+name = "AudioBridgeReceiver"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.29"
+cpal = "0.15"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+socket2 = "0.5"
+if-addrs = "0.13"
+humantime = "2"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.52"
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_UI_Shell", "Win32_UI_WindowsAndMessaging"] }
+
+[build-dependencies]
+embed-resource = "2"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true

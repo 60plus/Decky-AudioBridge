@@ -1,0 +1,30 @@
+{
+  "slug": "audio-bridge",
+  "name": "Audio Bridge",
+  "legacy_name": "Audio Bridge",
+  "author": "60plus",
+  "summary": "Stream the sound of your SteamOS gaming PC to another computer on your local network and listen there, while you stay in Gaming Mode.",
+  "description": "## Hear your games on another PC\nAudio Bridge sends the sound of your SteamOS gaming PC or Steam Deck over your home network to a Windows PC. A small receiver plays it on the headphones or speakers you choose there, while the game keeps running in Gaming Mode.\n\n## Simple to set up\nStart the receiver on the other PC, press Find receivers on my network in the plugin and pick it. No typing on the controller. Press Start streaming and play a test sound to check that everything works.\n\n## Choose the delay\nLow latency, Balanced and High quality presets trade a few milliseconds of delay for steadier sound on Wi-Fi. High quality sends 24-bit audio.\n\n## Stays out of the way\nStreaming keeps running when you close the menu or Decky reloads. The plugin does not change your audio devices or routing, installs nothing outside its folder and needs no root. It uses the open VBAN protocol, so other VBAN receivers work too.",
+  "categories": [
+    "Tools"
+  ],
+  "tags": [
+    "audio",
+    "network",
+    "streaming"
+  ],
+  "instructions": "## Getting started\n1. On your Windows PC, download AudioBridgeReceiver.exe from the project's Releases page and start it. Click Allow when Windows asks about the firewall.\n2. Install Audio Bridge and open it from the Quick Access menu.\n3. Press Find receivers on my network and pick your PC, or enter the address shown in the receiver window.\n4. Press Start streaming.\n\nBoth computers must be on the same local network. A wired connection gives the lowest delay.",
+  "changelog": "## 0.1.2\n- First public release, with store artwork and screenshots.\n\n## 0.1.1\n- The Quality list uses the full width, so the preset name is no longer cut off.\n\n## 0.1.0\n- First version: stream the gaming PC's sound to a Windows receiver over the local network.\n- Find receivers with one button, three quality presets, test sound, optional automatic start.\n- Windows receiver with output device, volume, delay setting, start with Windows and a firewall helper.",
+  "screenshots": [
+    "https://github.com/60plus/Decky-AudioBridge/raw/main/assets/screenshots/panel-streaming.jpg",
+    "https://github.com/60plus/Decky-AudioBridge/raw/main/assets/screenshots/panel-options.jpg",
+    "https://github.com/60plus/Decky-AudioBridge/raw/main/assets/screenshots/receiver.png"
+  ],
+  "icon_url": "https://github.com/60plus/Decky-AudioBridge/raw/main/assets/icon.png",
+  "image_url": "https://github.com/60plus/Decky-AudioBridge/raw/main/assets/cover.png",
+  "license": "MIT",
+  "source_url": "https://github.com/60plus/Decky-AudioBridge",
+  "homepage": "https://github.com/60plus/Decky-AudioBridge#readme",
+  "support": [],
+  "requires_root": false
+}

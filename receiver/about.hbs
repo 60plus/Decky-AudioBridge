@@ -1,0 +1,15 @@
+Third party licenses for Audio Bridge Receiver
+
+Audio Bridge Receiver is built from the Rust crates listed below. Each
+license text is followed by the crates that use it.
+
+{{#each licenses}}
+================================================================================
+{{name}} ({{id}})
+Used by:
+{{#each used_by}}  - {{crate.name}} {{crate.version}}{{#if crate.repository}} ({{crate.repository}}){{/if}}
+{{/each}}
+--------------------------------------------------------------------------------
+{{text}}
+
+{{/each}}

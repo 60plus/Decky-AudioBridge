@@ -1,0 +1,15 @@
+{
+  "name": "Audio Bridge",
+  "author": "60plus",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "description": "Stream the sound of your SteamOS gaming PC to another computer on your local network and listen there, while you stay in Gaming Mode.",
+    "tags": [
+      "audio",
+      "network",
+      "streaming"
+    ],
+    "image": "https://github.com/60plus/Decky-AudioBridge/raw/main/assets/cover.png"
+  }
+}
