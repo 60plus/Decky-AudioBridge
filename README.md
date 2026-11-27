@@ -62,11 +62,19 @@ The receiver on Windows:
 
 ## Quality presets
 
-| Preset | Sound | Receiver buffer | Good for |
-| --- | --- | --- | --- |
-| Low latency | 16-bit, 48 kHz | about 20 ms | Wired networks, fast games |
-| Balanced | 16-bit, 48 kHz | about 40 ms | Most setups |
-| High quality | 24-bit, 48 kHz | about 80 ms | Wi-Fi, music heavy games |
+The presets trade delay against tolerance for network hiccups. Low latency
+is the fastest, High quality is the most forgiving. On a cable all three
+work, so choose by how much delay you accept. Wi-Fi delivers packets
+unevenly, and a larger buffer rides that out.
+
+| Preset | Sound | Receiver buffer | On a cable | On Wi-Fi |
+| --- | --- | --- | --- | --- |
+| Low latency | 16-bit, 48 kHz | about 20 ms | Best for fast games | May crackle |
+| Balanced | 16-bit, 48 kHz | about 40 ms | Works well | Works on most networks |
+| High quality | 24-bit, 48 kHz | about 80 ms | Works, with more delay than needed | Steadiest choice |
+
+On a cable, start with Low latency. On Wi-Fi, start with Balanced and move to
+High quality if you hear crackles.
 
 The buffer is only part of the total delay. Capture, the network and the sound
 card on the receiving PC add to it, so the delay you hear is longer than the
